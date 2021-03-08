@@ -1,0 +1,19 @@
+Package: customthemes
+Title: custom theming for ggplot for personal use
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Carlos",
+           family = "Yanez Santibanez",
+           role = c("aut", "cre"),
+           email = "carlos@carlosyanez.cl")
+Description: Collection of (ggplot) theming options for personal use.
+License: CC0
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports: 
+         ggplot2,
+         showtext,
+         curl,
+         sysfonts

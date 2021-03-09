@@ -2,16 +2,27 @@
 % Please edit documentation in R/customplottheme.R
 \name{set_plot_colours}
 \alias{set_plot_colours}
-\title{Set colour for standard chart fillings and lines
-@return no output
-@import ggplot2
-@export set_plot_colours}
+\title{Set colour for standard chart fillings and lines}
 \usage{
-set_plot_colours()
+set_plot_colours(
+  line_colour = "darkblue",
+  fill_colour = "deepskyblue",
+  alt_fill_colour = "white",
+  alpha_setting = 0.3
+)
+}
+\arguments{
+\item{line_colour}{general colour for lines}
+
+\item{fill_colour}{fill colour for plots like density plots}
+
+\item{alt_fill_colour}{fill colour for plots like boxplots}
+
+\item{alpha_setting}{alpha value when fill_colour is used}
+}
+\value{
+no output
 }
 \description{
 Set colour for standard chart fillings and lines
-@return no output
-@import ggplot2
-@export set_plot_colours
 }

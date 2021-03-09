@@ -4,7 +4,21 @@
 \alias{custom_plot_theme}
 \title{Custom theme for ggplot plots}
 \usage{
-custom_plot_theme()
+custom_plot_theme(
+  google_font = "Roboto",
+  title_colour = "#272928",
+  general_colour = "azure4",
+  bg_colour = "#fcf8f7"
+)
+}
+\arguments{
+\item{google_font}{font, from Google Fonts}
+
+\item{title_colour}{Colour for title and legend textx}
+
+\item{general_colour}{Colour for all other texts in plot}
+
+\item{bg_colour}{Background colour}
 }
 \value{
 ggplot theme object

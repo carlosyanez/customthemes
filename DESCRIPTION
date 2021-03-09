@@ -7,7 +7,7 @@ Authors@R:
            role = c("aut", "cre"),
            email = "carlos@carlosyanez.cl")
 Description: Collection of (ggplot) theming options for personal use.
-License: CC0
+License: `use_ccby_license()`
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
@@ -16,4 +16,5 @@ Imports:
          ggplot2,
          showtext,
          curl,
-         sysfonts
+         sysfonts,
+         RColorBrewer

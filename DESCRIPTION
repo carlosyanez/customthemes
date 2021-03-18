@@ -17,4 +17,5 @@ Imports:
          showtext,
          curl,
          sysfonts,
-         RColorBrewer
+         RColorBrewer,
+         magick

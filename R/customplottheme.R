@@ -60,7 +60,8 @@ custom_plot_theme <- function(google_font="Roboto",
 #' @param  google_font font, from Google Fonts
 #' @param  map_title_size Title's size
 #' @export custom_map_theme
-custom_map_theme <- function(google_font="Roboto",map_title_size=14){
+custom_map_theme <- function(google_font="Roboto",map_title_size=14,
+                             legend_pos="bottom",legend_dir="horizontal"){
 
                    sysfonts::font_add_google(google_font, google_font)
                    showtext::showtext_auto()
@@ -77,8 +78,8 @@ custom_map_theme <- function(google_font="Roboto",map_title_size=14){
                            panel.grid.minor = ggplot2::element_blank(),
                            plot.title = ggplot2::element_text(size = map_title_size, face = "bold",family=google_font),
                            plot.subtitle = ggplot2::element_text(size = 12,family=google_font),
-                           legend.position="bottom",
-                           legend.direction="horizontal"
+                           legend.position=legend_pos,
+                           legend.direction=legend_dir
                      )
 
                    theme_map
@@ -147,9 +148,9 @@ custom_strip_theme <- function(google_font="Roboto",rbrewer_pal="RdBu"){
 #' @param x_pos_round relative position rounding (magick parameter)
 #' @param rewrite_file whether to rewrite the file with finished plot
 #' @export add_logo
-add_logo <- function(plot,logo,annotation_text,
+add_logo <- function(orig_plot,logo_file,annotation_text,
                      plot_file="temp.png",plot_dpi=320,
-                     plot_width=6.4,plot_height=6.5,
+                     plot_width=NA,plot_height=NA,
                      logo_resize="60x60",
                      image_extent="700x60",image_gravity="west",
                      annotation_colour="black",google_font="Roboto",
@@ -160,7 +161,7 @@ add_logo <- function(plot,logo,annotation_text,
   sysfonts::font_add_google(google_font, google_font)
   showtext::showtext_auto()
 
-  ggsave(plot_file,map,dpi=plot_dpi,width = plot_width,height = plot_height)
+  ggsave(plot_file,orig_plot,dpi=plot_dpi,width = plot_width,height = plot_height)
 
   plot <- image_read(plot_file)
   logo_raw <- image_read(logo_file)

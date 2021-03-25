@@ -4,7 +4,12 @@
 \alias{custom_map_theme}
 \title{Custom theme for ggplot maps}
 \usage{
-custom_map_theme(google_font = "Roboto", map_title_size = 14)
+custom_map_theme(
+  google_font = "Roboto",
+  map_title_size = 14,
+  legend_pos = "bottom",
+  legend_dir = "horizontal"
+)
 }
 \arguments{
 \item{google_font}{font, from Google Fonts}

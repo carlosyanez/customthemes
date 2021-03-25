@@ -5,13 +5,13 @@
 \title{Add logo to plot, option to write into file}
 \usage{
 add_logo(
-  plot,
-  logo,
+  orig_plot,
+  logo_file,
   annotation_text,
   plot_file = "temp.png",
   plot_dpi = 320,
-  plot_width = 6.4,
-  plot_height = 6.5,
+  plot_width = NA,
+  plot_height = NA,
   logo_resize = "60x60",
   image_extent = "700x60",
   image_gravity = "west",
@@ -24,10 +24,6 @@ add_logo(
 )
 }
 \arguments{
-\item{plot}{existing chart}
-
-\item{logo}{logo to be added (image file)}
-
 \item{annotation_text}{text to be added next to the text (e.g. twitter handle)}
 
 \item{plot_file}{file where to save the plot}
@@ -55,6 +51,10 @@ add_logo(
 \item{x_pos_round}{relative position rounding (magick parameter)}
 
 \item{rewrite_file}{whether to rewrite the file with finished plot}
+
+\item{plot}{existing chart}
+
+\item{logo}{logo to be added (image file)}
 }
 \value{
 raster object

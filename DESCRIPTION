@@ -1,6 +1,6 @@
 Package: customthemes
 Title: custom theming for ggplot for personal use
-Version: 0.0.0.9000
+Version: 0.0.0.91
 Authors@R: 
     person(given = "Carlos",
            family = "Yanez Santibanez",
@@ -18,4 +18,7 @@ Imports:
          curl,
          sysfonts,
          RColorBrewer,
-         magick
+         magick,
+         ggtext,
+         stringr,
+         magrittr

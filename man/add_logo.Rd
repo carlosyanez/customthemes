@@ -24,6 +24,10 @@ add_logo(
 )
 }
 \arguments{
+\item{orig_plot}{existing chart}
+
+\item{logo_file}{logo to be added (image file)}
+
 \item{annotation_text}{text to be added next to the text (e.g. twitter handle)}
 
 \item{plot_file}{file where to save the plot}
@@ -51,10 +55,6 @@ add_logo(
 \item{x_pos_round}{relative position rounding (magick parameter)}
 
 \item{rewrite_file}{whether to rewrite the file with finished plot}
-
-\item{plot}{existing chart}
-
-\item{logo}{logo to be added (image file)}
 }
 \value{
 raster object

@@ -23,6 +23,7 @@ set_plot_colours <- function(line_colour="darkblue",fill_colour="deepskyblue",
 #' Custom theme for ggplot plots
 #' @return ggplot theme object
 #' @import ggplot2
+#' @import ggtext
 #' @import showtext
 #' @import sysfonts
 #' @param  google_font font, from Google Fonts
@@ -39,13 +40,13 @@ custom_plot_theme <- function(google_font="Roboto",
                         my_theme <- ggplot2::theme_set(ggplot2::theme_minimal())
 
                         my_theme <- ggplot2::theme_update(legend.position="bottom",
-                         plot.title = ggplot2::element_text(size=16,face="bold",colour = title_colour,family=google_font),
-                         plot.subtitle =ggplot2::element_text(size=10,colour = general_colour,family=google_font),
-                         plot.caption =  ggplot2::element_text(size=10,colour = general_colour,family=google_font),
-                         axis.text = ggplot2::element_text(size=10,colour = general_colour,family=google_font),
-                         axis.title = ggplot2::element_text(size=10,colour = general_colour,family=google_font),
-                         legend.text = ggplot2::element_text(size=10,colour = title_colour,family=google_font),
-                         strip.text = ggplot2::element_text(face = "bold", color = general_colour,
+                         plot.title = ggtext::element_markdown(size=16,face="bold",colour = title_colour,family=google_font),
+                         plot.subtitle =ggtext::element_markdown(size=10,colour = general_colour,family=google_font),
+                         plot.caption =  ggtext::element_markdown(size=10,colour = general_colour,family=google_font),
+                         axis.text = ggtext::element_markdown(size=10,colour = general_colour,family=google_font),
+                         axis.title = ggtext::element_markdown(size=10,colour = general_colour,family=google_font),
+                         legend.text = ggtext::element_markdown(size=10,colour = title_colour,family=google_font),
+                         strip.text = ggtext::element_markdown(face = "bold", color = general_colour,
                                                    hjust = 0, size = 8,family=google_font),
                          strip.background = ggplot2::element_rect(fill = bg_colour,linetype = "blank"))
 
@@ -55,6 +56,7 @@ custom_plot_theme <- function(google_font="Roboto",
 #' Custom theme for ggplot maps
 #' @return ggplot theme object
 #' @import ggplot2
+#' @import ggtext
 #' @import showtext
 #' @import sysfonts
 #' @param  google_font font, from Google Fonts
@@ -73,11 +75,11 @@ custom_map_theme <- function(google_font="Roboto",map_title_size=14,
                            axis.line.x = ggplot2::element_blank(),
                            axis.title = ggplot2::element_blank(),
                            panel.grid.major = ggplot2::element_blank(),
-                           legend.title = ggplot2::element_text(vjust=0.75,hjust=1,size=10,family=google_font),
-                           legend.text=ggplot2::element_text(size=8,family=google_font),
+                           legend.title = ggtext::element_markdown(vjust=0.75,hjust=1,size=10,family=google_font),
+                           legend.text=ggtext::element_markdown(size=8,family=google_font),
                            panel.grid.minor = ggplot2::element_blank(),
-                           plot.title = ggplot2::element_text(size = map_title_size, face = "bold",family=google_font),
-                           plot.subtitle = ggplot2::element_text(size = 12,family=google_font),
+                           plot.title = ggtext::element_markdown(size = map_title_size, face = "bold",family=google_font),
+                           plot.subtitle = ggtext::element_markdown(size = 12,family=google_font),
                            legend.position=legend_pos,
                            legend.direction=legend_dir
                      )
@@ -92,6 +94,7 @@ custom_map_theme <- function(google_font="Roboto",map_title_size=14,
 #' @return ggplot theme object
 #' @import ggplot2
 #' @import RColorBrewer
+#' @import ggtext
 #' @import showtext
 #' @import sysfonts
 #' @param  google_font font, from Google Fonts
@@ -111,12 +114,12 @@ custom_strip_theme <- function(google_font="Roboto",rbrewer_pal="RdBu"){
           axis.line.y = ggplot2::element_blank(),
           axis.title = ggplot2::element_blank(),
           panel.grid.major = ggplot2::element_blank(),
-          legend.title = ggplot2::element_text(vjust=0.75,hjust=1,size=10,family=google_font),
-          legend.text=ggplot2::element_text(size=8,family=google_font),
-          axis.text.x = ggplot2::element_text(vjust = 1,size=10,family=google_font),
+          legend.title = ggtext::element_markdown(vjust=0.75,hjust=1,size=10,family=google_font),
+          legend.text=ggtext::element_markdown(size=8,family=google_font),
+          axis.text.x = ggtext::element_markdown(vjust = 1,size=10,family=google_font),
           panel.grid.minor = ggplot2::element_blank(),
-          plot.title = ggplot2::element_text(size = 14, face = "bold",family=google_font),
-          plot.subtitle = ggplot2::element_text(size = 12,family=google_font),
+          plot.title = ggtext::element_markdown(size = 14, face = "bold",family=google_font),
+          plot.subtitle = ggtext::element_markdown(size = 12,family=google_font),
           legend.position="bottom",
           legend.direction="horizontal"
 
@@ -129,10 +132,14 @@ custom_strip_theme <- function(google_font="Roboto",rbrewer_pal="RdBu"){
 #' Add logo to plot, option to write into file
 #' @return raster object
 #' @import magick
+#' @import ggplot2
+#' @importFrom stringr str_c
+#' @import magrittr
+#' @import ggtext
 #' @import showtext
 #' @import sysfonts
-#' @param plot existing chart
-#' @param logo logo to be added (image file)
+#' @param orig_plot existing chart
+#' @param logo_file logo to be added (image file)
 #' @param annotation_text text to be added next to the text (e.g. twitter handle)
 #' @param plot_file  file where to save the plot
 #' @param plot_dpi   plot file resolution

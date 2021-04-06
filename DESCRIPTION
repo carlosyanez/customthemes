@@ -21,4 +21,8 @@ Imports:
          magick,
          ggtext,
          stringr,
-         magrittr
+         magrittr,
+         knitr,
+         pdftools,
+         png,
+         grDevices

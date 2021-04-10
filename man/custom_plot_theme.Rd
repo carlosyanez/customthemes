@@ -8,7 +8,9 @@ custom_plot_theme(
   google_font = "Roboto",
   title_colour = "#272928",
   general_colour = "azure4",
-  bg_colour = "#fcf8f7"
+  background_colour = "#fcf8f7",
+  legend_pos = "right",
+  legend_dir = "vertical"
 )
 }
 \arguments{
@@ -18,7 +20,11 @@ custom_plot_theme(
 
 \item{general_colour}{Colour for all other texts in plot}
 
-\item{bg_colour}{Background colour}
+\item{background_colour}{Background colour}
+
+\item{legend_pos}{legend's position (default right)}
+
+\item{legend_dir}{legend's direction (defaul vertical)}
 }
 \value{
 ggplot theme object

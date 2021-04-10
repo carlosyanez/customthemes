@@ -4,7 +4,13 @@
 \alias{save_image}
 \title{save ggplot into PNG file}
 \usage{
-save_image(plot_name, file_name, dpi_value = 600)
+save_image(
+  plot_name,
+  file_name,
+  dpi_value = 600,
+  width_value = NA,
+  height_value = NA
+)
 }
 \arguments{
 \item{plot_name}{ggplot object}
@@ -12,6 +18,10 @@ save_image(plot_name, file_name, dpi_value = 600)
 \item{file_name}{file's name (including .png)}
 
 \item{dpi_value}{resolution (default 600)}
+
+\item{width_value}{width for ggsave}
+
+\item{height_value}{height for ggsave}
 }
 \value{
 saved file in disk

@@ -7,6 +7,7 @@
 #' @param  dpi_value  resolution (default 600)
 #' @param  height_value  height for ggsave
 #' @param  width_value  width for ggsave
+#' @param  unit_value  unit for ggsave
 #' @import pdftools
 #' @importFrom ggplot2 ggsave
 #' @importFrom grDevices cairo_pdf
@@ -14,13 +15,23 @@
 #' @importFrom knitr plot_crop
 #' @return ggplot theme object
 #' @export save_image
-save_image <- function(plot_name,file_name,dpi_value=600,width_value = NA,height_value = NA){
+save_image <- function(plot_name,file_name,dpi_value=600,width_value = NA,height_value = NA, unit_value=NA){
 
+  if(is.na(units)){
   ggsave("temp.pdf",plot_name,
          device=cairo_pdf,
          dpi=dpi_value,
          width = width_value,
          height = height_value)
+   }else{
+    ggsave("temp.pdf",plot_name,
+           device=cairo_pdf,
+           dpi=dpi_value,
+           width = width_value,
+           height = height_value,
+           units=unit_value)
+
+  }
 
   knitr::plot_crop("temp.pdf")
   bitmap <- pdftools::pdf_render_page("temp.pdf", dpi = dpi_value)

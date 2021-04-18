@@ -9,7 +9,8 @@ save_image(
   file_name,
   dpi_value = 600,
   width_value = NA,
-  height_value = NA
+  height_value = NA,
+  unit_value = NA
 )
 }
 \arguments{
@@ -22,6 +23,8 @@ save_image(
 \item{width_value}{width for ggsave}
 
 \item{height_value}{height for ggsave}
+
+\item{unit_value}{unit for ggsave}
 }
 \value{
 saved file in disk

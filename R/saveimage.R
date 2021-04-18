@@ -17,7 +17,7 @@
 #' @export save_image
 save_image <- function(plot_name,file_name,dpi_value=600,width_value = NA,height_value = NA, unit_value=NA){
 
-  if(is.na(units)){
+  if(is.na(unit_value)){
   ggsave("temp.pdf",plot_name,
          device=cairo_pdf,
          dpi=dpi_value,

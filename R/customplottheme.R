@@ -22,6 +22,8 @@ custom_plot_theme <- function(google_font="Roboto",
 
                         my_theme <- ggplot2::theme_minimal() +
                                     ggplot2::theme(
+                         panel.background = element_rect(fill = background_colour, colour = NA),
+                         plot.background = element_rect(fill = background_colour, colour = NA),
                          plot.title = element_text(size=16,face="bold",colour = title_colour,family=google_font),
                          plot.subtitle =element_text(size=10,colour = general_colour,family=google_font),
                          plot.caption =  element_text(size=10,colour = general_colour,family=google_font),

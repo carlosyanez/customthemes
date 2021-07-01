@@ -1,11 +1,11 @@
 Package: customthemes
 Title: custom theming for ggplot for personal use
 Version: 0.0.0.91
-Authors@R: 
+Authors@R:
     person(given = "Carlos",
            family = "Yanez Santibanez",
            role = c("aut", "cre"),
-           email = "carlos@carlosyanez.cl")
+           email = "carlos.yanez.s@gmail.com")
 Description: Collection of (ggplot) theming options for personal use.
 License: `use_ccby_license()`
 Encoding: UTF-8

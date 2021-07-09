@@ -20,7 +20,8 @@ set_plot_colours <- function(line_colour="darkblue",
   ggplot2::update_geom_defaults("boxplot",   list(colour = line_colour,fill = alt_fill_colour))
   ggplot2::update_geom_defaults("density",   list(colour = line_colour,fill = fill_colour,alpha=alpha_setting))
   ggplot2::update_geom_defaults("rect",   list(colour = line_colour,fill = fill_colour,alpha=alpha_setting))
-  ggplot2::update_geom_defaults("GeomHline",   list(colour = HVline_colour))
-  ggplot2::update_geom_defaults("GeomVline",   list(colour = HVline_colour))
+  ggplot2::update_geom_defaults("Hline",   list(colour = HVline_colour))
+  ggplot2::update_geom_defaults("Vline",   list(colour = HVline_colour))
+  ggplot2::update_geom_defaults("Segment",   list(colour = line_colour))
 
 }

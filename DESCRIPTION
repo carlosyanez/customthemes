@@ -1,6 +1,6 @@
 Package: customthemes
 Title: custom theming for ggplot for personal use
-Version: 0.0.0.91
+Version: 0.0.0.92
 Authors@R:
     person(given = "Carlos",
            family = "Yanez Santibanez",

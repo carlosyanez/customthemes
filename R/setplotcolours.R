@@ -16,5 +16,6 @@ set_plot_colours <- function(line_colour="darkblue",fill_colour="deepskyblue",
   ggplot2::update_geom_defaults("col",   list(colour = line_colour,fill = fill_colour))
   ggplot2::update_geom_defaults("boxplot",   list(colour = line_colour,fill = alt_fill_colour))
   ggplot2::update_geom_defaults("density",   list(colour = line_colour,fill = fill_colour,alpha=alpha_setting))
+  ggplot2::update_geom_defaults("rect",   list(colour = line_colour,fill = fill_colour,alpha=alpha_setting))
 
 }

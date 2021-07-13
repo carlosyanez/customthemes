@@ -10,6 +10,8 @@ digits_formatter(x, sig_digits = 3, nbr_format = "f")
 \item{x}{number to format}
 
 \item{sig_digits}{decimal precission}
+
+\item{nbr_format}{format, default "f"}
 }
 \value{
 formatted number

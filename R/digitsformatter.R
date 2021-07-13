@@ -2,7 +2,7 @@
 #' @return formatted number
 #' @param x number to format
 #' @param sig_digits decimal precission
-#' @nbr_format format, default "f"
+#' @param nbr_format format, default "f"
 #' @export digits_formatter
 digits_formatter <- function(x,sig_digits=3,
                              nbr_format="f"){

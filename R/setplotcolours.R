@@ -4,6 +4,7 @@
 #' @param line_colour general colour for lines
 #' @param fill_colour fill colour for plots like density plots
 #' @param alpha_setting  alpha value when fill_colour is used
+#' @param HVline_colour  colour of vertical and horizontal lines
 #' @param alt_fill_colour fill colour for plots like boxplots
 #' @export set_plot_colours
 set_plot_colours <- function(line_colour="darkblue",

@@ -3,3 +3,6 @@
 .Rhistory
 .Rhistory
 tmp-pdfcrop-9040.tex
+docs
+.Rbuildignore
+.DS_Store

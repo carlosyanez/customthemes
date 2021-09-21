@@ -1,4 +1,4 @@
-<img src="https://github.com/carlosyanez/custom/raw/main/img/hexSticker.png" width = "175" height = "200" align="right" border=0 style="border:0; text-decoration:none; outline:none"/>
+<img src="https://github.com/carlosyanez/customthemes/raw/main/img/hexSticker.png" width = "175" height = "200" align="right" border=0 style="border:0; text-decoration:none; outline:none"/>
 
 
 # customthemes

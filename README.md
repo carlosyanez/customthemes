@@ -21,7 +21,7 @@ Alternatively, you can install it from [r-universe](https://r-universe.dev/)
   install.packages('customthemes')
 ```
 
-##Disclaimer
+## Disclaimer
 
 This package has been created for personal use.
 No guarantees, use at your own risk!

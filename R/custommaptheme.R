@@ -16,7 +16,7 @@ custom_map_theme <- function(google_font="Roboto",map_title_size=14,
   sysfonts::font_add_google(google_font, google_font)
   showtext::showtext_auto()
 
-  theme_map <-   ggplot2::theme_minimal()+
+  theme_map <-   ggplot2::theme_minimal() %+replace%
     ggplot2::theme(axis.text.y=ggplot2::element_blank(),
                    axis.text.x=ggplot2::element_blank(),
                    axis.line.y = ggplot2::element_blank(),

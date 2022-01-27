@@ -32,7 +32,7 @@ custom_plot_theme_md <- function(google_font="Roboto",
                         sysfonts::font_add_google(google_font, google_font)
                         showtext::showtext_auto()
 
-                        my_theme <-ggplot2::theme_minimal() +
+                        my_theme <-ggplot2::theme_minimal() %+replace%
                                    ggplot2::theme(
                                    panel.background = element_rect(fill = background_colour, colour = NA),
                                    plot.background = element_rect(fill = background_colour, colour = NA),

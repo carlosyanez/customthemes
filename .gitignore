@@ -6,3 +6,4 @@ tmp-pdfcrop-9040.tex
 
 .Rbuildignore
 .DS_Store
+.Rhistory

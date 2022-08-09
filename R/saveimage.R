@@ -10,22 +10,22 @@
 #' @param  unit_value  unit for ggsave
 #' @import pdftools
 #' @importFrom ggplot2 ggsave
-#' @importFrom grDevices cairo_pdf
 #' @importFrom png writePNG
 #' @importFrom knitr plot_crop
+#' @importFrom ragg agg_png
 #' @return ggplot theme object
 #' @export save_image
 save_image <- function(plot_name,file_name,dpi_value=600,width_value = NA,height_value = NA, unit_value=NA){
 
   if(is.na(unit_value)){
   ggsave("temp.pdf",plot_name,
-         device=cairo_pdf,
+         device=agg_png,
          dpi=dpi_value,
          width = width_value,
          height = height_value)
    }else{
     ggsave("temp.pdf",plot_name,
-           device=cairo_pdf,
+           device=agg_png,
            dpi=dpi_value,
            width = width_value,
            height = height_value,

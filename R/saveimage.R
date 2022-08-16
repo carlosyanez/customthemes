@@ -1,3 +1,4 @@
+
 # from https://www.pmassicotte.com/post/removing-borders-around-ggplot2-graphs/
 
 #' save ggplot into PNG file
@@ -18,14 +19,14 @@
 save_image <- function(plot_name,file_name,dpi_value=600,width_value = NA,height_value = NA, unit_value=NA){
 
   if(is.na(unit_value)){
-  ggsave("temp.pdf",plot_name,
-         device=agg_png,
-         dpi=dpi_value,
-         width = width_value,
-         height = height_value)
-   }else{
-    ggsave("temp.pdf",plot_name,
-           device=agg_png,
+    ggsave(file_name,plot_name,
+           device=ragg::agg_png,
+           dpi=dpi_value,
+           width = width_value,
+           height = height_value)
+  }else{
+    ggsave(file_name,plot_name,
+           device=ragg::agg_png,
            dpi=dpi_value,
            width = width_value,
            height = height_value,
@@ -33,10 +34,10 @@ save_image <- function(plot_name,file_name,dpi_value=600,width_value = NA,height
 
   }
 
-  knitr::plot_crop("temp.pdf")
-  bitmap <- pdftools::pdf_render_page("temp.pdf", dpi = dpi_value)
-  png::writePNG(bitmap, file_name)
-  file.remove("temp.pdf")
+  #knitr::plot_crop("temp.pdf")
+  #bitmap <- pdftools::pdf_render_page("temp.pdf", dpi = dpi_value)
+  #png::writePNG(bitmap, file_name)
+  #file.remove("temp.pdf")
 
   message(str_c("File ",file_name," saved"))
   invisible(TRUE)
